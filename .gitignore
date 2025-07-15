@@ -3,10 +3,24 @@
 # dependencies
 /node_modules
 /.pnp
+<<<<<<< HEAD
 .pnp.js
 
 # testing
 /coverage
+=======
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+/vitest-test-results
+.unlighthouse
+>>>>>>> 470bdf4 (First Version)
 
 # next.js
 /.next/
@@ -18,15 +32,32 @@
 # misc
 .DS_Store
 *.pem
+<<<<<<< HEAD
+=======
+Thumbs.db
+>>>>>>> 470bdf4 (First Version)
 
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 
 # local env files
 .env*.local
 .env
+=======
+.pnpm-debug.log*
+
+# local env files
+.env*.local
+
+# Sentry Config File
+.env.sentry-build-plugin
+
+# local folder
+local
+>>>>>>> 470bdf4 (First Version)
 
 # vercel
 .vercel
@@ -34,3 +65,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+<<<<<<< HEAD
+=======
+
+# Database
+*.db
+
+# storybook
+storybook-static
+*storybook.log
+build-archive.log
+
+# playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
+>>>>>>> 470bdf4 (First Version)
