@@ -22,12 +22,12 @@ async function fetchTours(): Promise<Tours[]> {
 
   return res.json();
 }
-export default async function WinterGroupTours() {
+export default async function WinterGroupTours({ soldout }: { soldout: boolean }) {
   const groupTours = await fetchTours();
   return (
-    <div className="grid gap-3 grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+    <div className="grid gap-3 grid-cols-1 md:grid-cols-3 lg:grid-cols-4  ">
       {groupTours.map(data => (
-        <div key={data.id} className="w-72 h-96 border-1 border-black">
+        <div key={data.id} className="w-72 h-96 border-1 border-black relative">
           <Image src={data.imageUrl} width={500} height={500} className="w-full" alt="img" />
           <div className="px-4 py-1">
             <p className="flex gap-2 items-center text-[10px]">
@@ -40,8 +40,10 @@ export default async function WinterGroupTours() {
               <span>{data.duration}</span>
             </p>
           </div>
+          {soldout && <Image src="/assets/images/sold-out.png" height={100} width={100} alt="tours" className="absolute -top-3" />}
         </div>
       ))}
+
     </div>
   );
 };

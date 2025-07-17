@@ -14,7 +14,9 @@ export default function GroupTours() {
       <div className="p-10">
         <h6 className="my-5 text-4xl">Ultimate Group Tour Adventures</h6>
         <h5 className="my-5 text-3xl">Winter Groups for 2025</h5>
-        <WinterGroupTours />
+        <WinterGroupTours soldout={false} />
+        <h6 className="my-5 text-4xl">Fully Reserved Exclusive Group Tours</h6>
+        <WinterGroupTours soldout={true} />
       </div>
     </>
   );
