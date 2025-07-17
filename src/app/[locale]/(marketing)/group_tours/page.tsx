@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import BookingTours from './BookingTours';
 import WinterGroupTours from './GroupTours';
 
 export default function GroupTours() {
@@ -17,7 +18,9 @@ export default function GroupTours() {
         <WinterGroupTours soldout={false} />
         <h6 className="my-5 text-4xl">Fully Reserved Exclusive Group Tours</h6>
         <WinterGroupTours soldout={true} />
+
       </div>
+      <BookingTours />
     </>
   );
 }
