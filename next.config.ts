@@ -10,7 +10,8 @@ const baseConfig: NextConfig = {
     dirs: ['.'],
   },
   images: {
-    remotePatterns: [new URL('https://group.gtholidays.in/wp-content/uploads/2023/08/Dubai-Group-Tour-600x600.jpg')],
+
+    remotePatterns: [new URL('https://group.gtholidays.in/**')],
   },
   poweredByHeader: false,
   reactStrictMode: true,
