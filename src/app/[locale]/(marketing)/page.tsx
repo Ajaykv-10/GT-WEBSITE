@@ -27,7 +27,9 @@ export default async function Index(props: IIndexProps) {
 
   return (
     <>
-      Ajay
+      <div className="h-32 border-2 border-pink-600">
+        <div className=" transform transition translate-y-8 translate-x-12"> Ajay</div>
+      </div>
     </>
   );
 };
