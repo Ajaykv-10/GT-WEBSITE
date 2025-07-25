@@ -1,4 +1,6 @@
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+
+import { NavigationModal } from '@/components/NavigationModal';
 import '@/styles/global.css';
 
 export default function GlobalLayout({ children }: { children: React.ReactNode }) {
@@ -11,7 +13,11 @@ export default function GlobalLayout({ children }: { children: React.ReactNode }
           <div className="h-auto w-2 border-r-1 border-sky-900"></div>
           <a href="mailto:mail@gtholidays.in" className="text-gray-100">mail@gtholidays.in</a>
         </header>
+
+        <NavigationModal />
+
         <section>{children}</section>
+
         <footer className="border-t border-gray-300 py-8 text-start text-sm">
           {`Copyright @ ${new Date().getFullYear()} by GT Holidays Pvt Ltd. All Rights Reserved.`}
         </footer>
