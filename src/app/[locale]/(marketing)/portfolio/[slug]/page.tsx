@@ -1,21 +1,9 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
-import { routing } from '@/libs/I18nRouting';
 
 type IPortfolioDetailProps = {
   params: Promise<{ slug: string; locale: string }>;
 };
-
-export function generateStaticParams() {
-  return routing.locales
-    .map(locale =>
-      Array.from(Array.from({ length: 6 }).keys()).map(elt => ({
-        slug: `${elt}`,
-        locale,
-      })),
-    )
-    .flat(1);
-}
 
 export async function generateMetadata(props: IPortfolioDetailProps) {
   const { locale, slug } = await props.params;
