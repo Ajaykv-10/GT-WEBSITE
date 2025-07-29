@@ -5,6 +5,7 @@
     "node": ">=20"
   },
   "scripts": {
+    "test": "echo \"No tests to run.\"",
     "dev:spotlight": "npx @spotlightjs/spotlight",
     "dev:next": "next dev --turbopack",
     "dev": "run-p dev:*",
