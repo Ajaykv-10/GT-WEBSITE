@@ -2,6 +2,7 @@ import type { ChromaticConfig } from '@chromatic-com/playwright';
 import { defineConfig, devices } from '@playwright/test';
 
 // Use process.env.PORT by default and fallback to port 3000
+// "build": "run-p db-server:memory build:* --race",
 const PORT = process.env.PORT || 3000;
 
 // Set webServer.url and use.baseURL with the location of the WebServer respecting the correct set port
