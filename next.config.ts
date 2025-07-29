@@ -2,15 +2,23 @@ import type { NextConfig } from 'next';
 
 // Define the base Next.js configuration
 const baseConfig: NextConfig = {
-  eslint: {
-    dirs: ['src'],
-  },
+  // eslint: {
+  //   dirs: ['src'],
+  // },
   images: {
 
-    remotePatterns: [new URL('https://group.gtholidays.in/**')],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'group.gtholidays.in',
+        pathname: '**',
+      },
+    ],
+
   },
   poweredByHeader: false,
   reactStrictMode: true,
+
 };
 
 // Initialize the Next-Intl plugin
