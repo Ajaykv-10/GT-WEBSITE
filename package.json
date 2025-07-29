@@ -22,15 +22,8 @@
     "check:i18n": "i18n-check -l src/locales -s en -u src -f next-intl",
     "commit": "commit",
 
-    "db-server:file": "pglite-server --db=local.db",
-    "db-server:memory": "pglite-server",
-    "db:generate": "drizzle-kit generate",
-    "db:studio": "drizzle-kit studio",
-    "storybook": "storybook dev -p 6006",
-    "storybook:test": "vitest run --config .storybook/vitest.config.mts",
-    "build-storybook": "storybook build",
-    "lighthouse": "unlighthouse-ci --site localhost:3000",
-    "test:lighthouse": "run-p start lighthouse --race"
+    "lighthouse": "unlighthouse-ci --site localhost:3000"
+
   },
   "dependencies": {
     "@arcjet/next": "^1.0.0-beta.8",
