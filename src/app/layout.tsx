@@ -7,7 +7,7 @@ export default function GlobalLayout({ children }: { children: React.ReactNode }
 
       <NavigationModal />
 
-      <section>{children}</section>
+      {children}
     </>
   );
 }

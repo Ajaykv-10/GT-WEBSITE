@@ -3,7 +3,7 @@ import type { NextConfig } from 'next';
 // Define the base Next.js configuration
 const baseConfig: NextConfig = {
   eslint: {
-    dirs: ['.'],
+    dirs: ['src'],
   },
   images: {
 
@@ -14,14 +14,13 @@ const baseConfig: NextConfig = {
 };
 
 // Initialize the Next-Intl plugin
-// let configWithPlugins = createNextIntlPlugin('./src/libs/I18n.ts')(baseConfig);
 
 // Conditionally enable bundle analysis
 // if (process.env.ANALYZE === 'true') {
 //   configWithPlugins = withBundleAnalyzer()(configWithPlugins);
 // }
 
-// Conditionally enable Sentry configuration
+// // Conditionally enable Sentry configuration
 // if (!process.env.NEXT_PUBLIC_SENTRY_DISABLED) {
 //   configWithPlugins = withSentryConfig(configWithPlugins, {
 //     // For all available options, see:
