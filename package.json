@@ -7,9 +7,10 @@
   "scripts": {
     "dev:spotlight": "npx @spotlightjs/spotlight",
     "dev:next": "next dev --turbopack",
-    "dev": "run-p db-server:file dev:*",
+    "dev": "run-p dev:*",
     "build:next": "next build",
-    "build": "run-p db-server:memory build:* --race",
+    "build": "next build",
+
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "clean": "rimraf .next out coverage",
@@ -33,23 +34,21 @@
   },
   "dependencies": {
     "@arcjet/next": "^1.0.0-beta.8",
-    "@clerk/localizations": "^3.18.1",
-    "@clerk/nextjs": "^6.25.0",
-    "@electric-sql/pglite": "^0.3.4",
+
     "@hookform/resolvers": "^5.1.1",
     "@logtape/logtape": "^1.0.4",
     "@sentry/nextjs": "^9.38.0",
     "@t3-oss/env-nextjs": "^0.13.8",
-    "drizzle-orm": "^0.44.3",
+
     "next": "^15.4.1",
     "next-intl": "^4.3.4",
-    "pg": "^8.16.3",
-    "posthog-js": "^1.257.0",
+
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hook-form": "^7.60.0",
     "react-icons": "^5.5.0",
-    "zod": "^4.0.5"
+    "zod": "^4.0.5",
+    "zustand": "^5.0.6"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.16.2",

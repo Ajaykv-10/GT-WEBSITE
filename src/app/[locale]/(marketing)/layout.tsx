@@ -85,7 +85,10 @@ export default async function Layout(props: {
           </>
         )}
       > */}
-      <div>{props.children}</div>
+
+      <div>
+        {props.children}
+      </div>
       {/* </BaseTemplate> */}
     </>
   );
