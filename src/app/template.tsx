@@ -14,12 +14,12 @@ export default function GlobalTemplate({ children }: { children: React.ReactNode
           <div className="h-auto w-2 border-r-1 border-sky-900"></div>
           <a href="mailto:mail@gtholidays.in" className="text-gray-100">mail@gtholidays.in</a>
         </header>
-        <div className="flex  p-4 gap-3 justify-between items-center">
+        <div className="flex sticky top-0 z-100 h-20 bg-white gap-3 justify-between items-center">
           <SideBar />
           <Image src="/assets/images/GT-Holidays-Logo.jpg" alt="GT Logo" width={170} height={70} />
-          <div className="hidden md:block">
+          <div className="hidden md:block h-full ">
 
-            <nav className="flex gap-4 items-center ">{navigationMenuItems.map(item => <Link key={item.label} className="hover:bg-primaryColor-500 h-full hidden md:block" href={item.path}><span className="font-semibold">{item.label.toUpperCase()}</span></Link>)}</nav>
+            <nav className="flex gap-4 h-full">{navigationMenuItems.map(item => <div key={item.label} className="hover:bg-primaryColor-500 h-full  hidden md:block "><Link href={item.path}><span className="font-semibold">{item.label.toUpperCase()}</span></Link></div>)}</nav>
           </div>
         </div>
         {children}
