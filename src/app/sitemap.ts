@@ -1,10 +1,9 @@
 import type { MetadataRoute } from 'next';
-import { getBaseUrl } from '@/utils/Helpers';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: `${getBaseUrl()}/`,
+      url: `/`,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.7,
