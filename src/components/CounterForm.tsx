@@ -2,7 +2,6 @@
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
-import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { CounterValidation } from '@/validations/CounterValidation';
 
@@ -14,23 +13,22 @@ export const CounterForm = () => {
       increment: 0,
     },
   });
-  const router = useRouter();
 
-  const handleIncrement = form.handleSubmit(async (data) => {
-    await fetch(`/api/counter`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
+  // const handleIncrement = form.handleSubmit(async (data) => {
+  //   await fetch(`/api/counter`, {
+  //     method: 'PUT',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify(data),
+  //   });
 
-    form.reset();
-    router.refresh();
-  });
+  //   form.reset();
+  //   router.refresh();
+  // });
 
   return (
-    <form onSubmit={handleIncrement}>
+    <form>
       <p>{t('presentation')}</p>
       <div>
         <label className="text-sm font-bold text-gray-700" htmlFor="increment">
