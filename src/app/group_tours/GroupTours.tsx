@@ -25,25 +25,44 @@ async function fetchTours(): Promise<Tours[]> {
 export default async function WinterGroupTours({ soldout }: { soldout: boolean }) {
   const groupTours = await fetchTours();
   return (
-    <div className="grid gap-3 grid-cols-1 md:grid-cols-3 lg:grid-cols-4  ">
+    <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4">
       {groupTours.map(data => (
-        <div key={data.id} className="w-72 h-96 border-1 border-black relative">
-          <Image src={data.imageUrl} width={500} height={500} className="w-full" alt="img" />
-          <div className="px-4 py-1">
-            <p className="flex gap-2 items-center text-[10px]">
-              <span><FaLocationDot /></span>
-              <span>{data.location}</span>
+        <div
+          key={data.id}
+          className="relative rounded-2xl  border shadow hover:shadow-lg transition-all duration-300 bg-white"
+        >
+          <Image
+            src={data.imageUrl}
+            width={500}
+            height={300}
+            alt="Tour Image"
+            className="w-full h-48 object-cover rounded-2xl"
+          />
+
+          {soldout && (
+            <Image
+              src="/assets/images/sold-out.png"
+              height={80}
+              width={80}
+              alt="Sold Out"
+              className="absolute -top-2 left-2 z-10 w-20"
+            />
+          )}
+
+          <div className="p-4 space-y-2">
+            <p className="flex items-center text-xs text-gray-600">
+              <FaLocationDot className="mr-1 text-red-500" />
+              {data.location}
             </p>
-            <h4>{data.name}</h4>
-            <p className="flex gap-2 items-center text-[15px] text-amber-600">
-              <span><FiClock /></span>
-              <span>{data.duration}</span>
+            <h4 className="text-base font-semibold text-gray-900">{data.name}</h4>
+            <p className="flex items-center text-sm text-amber-600">
+              <FiClock className="mr-1" />
+              {data.duration}
             </p>
           </div>
-          {soldout && <Image src="/assets/images/sold-out.png" height={100} width={100} alt="tours" className="absolute -top-3" />}
         </div>
       ))}
-
     </div>
+
   );
 };
