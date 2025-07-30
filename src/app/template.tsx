@@ -18,8 +18,7 @@ export default function GlobalTemplate({ children }: { children: React.ReactNode
           <SideBar />
           <Image src="/assets/images/GT-Holidays-Logo.jpg" alt="GT Logo" width={170} height={70} />
           <div className="hidden md:block h-full ">
-
-            <nav className="flex gap-4 h-full">{navigationMenuItems.map(item => <div key={item.label} className="hover:bg-primaryColor-500 h-full  hidden md:block "><Link href={item.path}><span className="font-semibold">{item.label.toUpperCase()}</span></Link></div>)}</nav>
+            <nav className="flex gap-4 h-full">{navigationMenuItems.map(item => <div key={item.label} className="hover:bg-primaryColor-500 h-full   flex items-center "><Link href={item.path}><span className="font-semibold">{item.label.toUpperCase()}</span></Link></div>)}</nav>
           </div>
         </div>
         {children}

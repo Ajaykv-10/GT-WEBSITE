@@ -24,10 +24,10 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-xs">
-
-      {children}
-
+    <div className="fixed inset-0 z-150 flex items-center justify-center bg-black/40 backdrop-blur-xs">
+      <div>
+        {children}
+      </div>
     </div>
   );
 }
