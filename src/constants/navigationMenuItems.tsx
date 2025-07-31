@@ -1,25 +1,25 @@
 export const navigationMenuItems = [{
   label: 'Home',
-  path: '/group_tours',
+  path: '/',
 }, {
   label: 'Company',
-  path: '/group_tours',
+  path: '/company',
 }, {
   label: 'Group Tours',
   path: '/group_tours',
 }, {
   label: 'Packages',
-  path: '/group_tours',
+  path: '/packages',
 }, {
   label: 'India',
-  path: '/group_tours',
+  path: '/india',
 }, {
   label: 'Honeymoon',
-  path: '/group_tours',
+  path: '/honeymoon',
 }, {
   label: 'Wedding',
-  path: '/group_tours',
+  path: '/wedding',
 }, {
   label: 'Contact',
-  path: '/group_tours',
+  path: '/contacts',
 }];
