@@ -6,7 +6,7 @@ export type NavStore = {
   closeToggle: () => void;
 };
 const usesideNavStore = create<NavStore>(set => ({
-  isOpen: false,
+  isOpen: true,
   openToggle: () => set({ isOpen: true }),
   closeToggle: () => set({ isOpen: false }),
 }));
