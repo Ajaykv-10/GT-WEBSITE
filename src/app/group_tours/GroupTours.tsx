@@ -25,11 +25,11 @@ async function fetchTours(): Promise<Tours[]> {
 export default async function WinterGroupTours({ soldout }: { soldout: boolean }) {
   const groupTours = await fetchTours();
   return (
-    <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-4">
+    <div className="grid gap-6  sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 p-4">
       {groupTours.map(data => (
         <div
           key={data.id}
-          className="relative   border bg-white"
+          className="relative  border border-gray-300  bg-white"
         >
           <Image
             src={data.imageUrl}
