@@ -29,14 +29,14 @@ export default async function WinterGroupTours({ soldout }: { soldout: boolean }
       {groupTours.map(data => (
         <div
           key={data.id}
-          className="relative rounded-2xl  border shadow hover:shadow-lg transition-all duration-300 bg-white"
+          className="relative   border bg-white"
         >
           <Image
             src={data.imageUrl}
             width={500}
-            height={300}
+            height={500}
             alt="Tour Image"
-            className="w-full h-48 object-cover rounded-2xl"
+            className="w-full  object-cover "
           />
 
           {soldout && (
@@ -51,7 +51,7 @@ export default async function WinterGroupTours({ soldout }: { soldout: boolean }
 
           <div className="p-4 space-y-2">
             <p className="flex items-center text-xs text-gray-600">
-              <FaLocationDot className="mr-1 text-red-500" />
+              <FaLocationDot className="mr-1 text-gray-500" />
               {data.location}
             </p>
             <h4 className="text-base font-semibold text-gray-900">{data.name}</h4>

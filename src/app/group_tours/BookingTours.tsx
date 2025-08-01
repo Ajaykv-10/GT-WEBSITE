@@ -1,4 +1,5 @@
 import { FaPhone } from 'react-icons/fa';
+import FormInput from '@/components/FormInput';
 
 export default function BookingTours() {
   return (
@@ -14,64 +15,23 @@ export default function BookingTours() {
           <a href="mailto:mail@gtholidays.in" className="">mail@gtholidays.in</a>
         </div>
         <div>
-          <p className="text-2xl">Book Your Dream Vacay Today!</p>
+          <p className="text-2xl mb-5">Book Your Dream Vacay Today!</p>
           <form>
 
-            <div className="flex flex-col  gap-3">
+            <div className="flex flex-col  gap-5">
 
-              <input
-
-                type="text"
-                placeholder="Name"
-                className="border w-full  border-gray-900 p-2 text-sm leading-tight text-gray-700 bg-white focus:outline-none focus:ring-0"
-
-              />
-              <input
-                id="increment"
-                type="text"
-                placeholder="City Of Residence"
-                className="border w-full  border-gray-900 p-2 text-sm leading-tight text-gray-700 bg-white focus:outline-none focus:ring-0"
-              />
-              <input
-                id="increment"
-                type="text"
-                placeholder="Email"
-                className="border w-full  border-gray-900 p-2 text-sm leading-tight text-gray-700 bg-white focus:outline-none focus:ring-0"
-              />
-              <input
-                id="increment"
-                type="text"
-                placeholder="Phone Number"
-                className="border w-full  border-gray-900 p-2 text-sm leading-tight text-gray-700 bg-white focus:outline-none focus:ring-0"
-              />
-              <input
-                id="increment"
-                type="text"
-                placeholder="Travel Destination"
-                className="border w-full  border-gray-900 p-2 text-sm leading-tight text-gray-700 bg-white focus:outline-none focus:ring-0"
-              />
-              <input
-                id="increment"
-                type="text"
-                placeholder="Date Of Travel"
-                className="border w-full  border-gray-900 p-2 text-sm leading-tight text-gray-700 bg-white focus:outline-none focus:ring-0"
-              />
-              <input
-                id="increment"
-                type="text"
-                placeholder="No. Of People"
-                className="border w-full  border-gray-900 p-2 text-sm leading-tight text-gray-700 bg-white focus:outline-none focus:ring-0"
-              />
-              <input
-                id="increment"
-                type="select"
-                placeholder="Vacation Type"
-                className="border w-full  border-gray-900 p-2 text-sm leading-tight text-gray-700 bg-white focus:outline-none focus:ring-0"
-              />
+              <FormInput name="name" type="text" placeHolder="Name" />
+              <FormInput name="city_of_residence" type="text" placeHolder="City Of Residence" />
+              <FormInput name="email" type="text" placeHolder="Email" />
+              <FormInput name="mobile_number" type="text" placeHolder="Phone Number" />
+              <FormInput name="destination" type="text" placeHolder="Travel Destination" />
+              <FormInput name="date" type="text" placeHolder="Date Of Travel" />
+              <FormInput name="no-of-people" type="text" placeHolder="No. Of People" />
+              <FormInput name="type" type="text" placeHolder="Vacation Type" />
 
             </div>
 
-            <div className="mt-2">
+            <div className="mt-5">
               <button
                 className=" bg-primaryColor-500 px-5 py-1 w-full font-bold text-black  focus:outline-hidden focus:ring-3 hover:bg-black hover:text-gray-300 disabled:pointer-events-none disabled:opacity-50"
                 type="submit"
